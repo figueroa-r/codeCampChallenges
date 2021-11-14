@@ -1,0 +1,23 @@
+function palindrome(str) {
+  //lets get an array of all alphanumeric characters. keep in mind our array still has capitalization to it. Our regex ignores case (i) and returns all matches (g)
+  let str1 = str.match(/[a-z0-9]/ig)
+  //the code under this line would return a string instead of an array.
+  //str1.concat(...str.match(/[a-z0-9]/ig));
+
+
+
+
+  //Here, we will iterate through half of the length of the array. Essentially, we want to compare the first half of values, to the last half but mirrored/equidistant from the center. we convert to lowercase, since it has no effect on numbers in a string format. Thus capital letters are converted to lowercase.
+
+
+  for (let i = 0; i < Math.floor(str1.length / 2); i++) {
+    //With the if statement in this for loop, we can exit the function if there is a non-matching pair by returning false. Otherwise the for loop just iterates through and checks the condition for all characters (except the middle character in odd lengthed arrays).
+    if (str1[i].toLowerCase() !== str1[str1.length-1-i].toLowerCase()) {
+      return false;
+    }
+  }
+  //if all the values pass the test, then we simply return true, since it meets the palindrome condition set by the problem.
+  return true;
+}
+
+palindrome("My age is 0, 0 si ega ym.");
