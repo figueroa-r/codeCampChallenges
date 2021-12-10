@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .d1{background:LightSkyBlue;}
+        .d2{background:LightSalmon;}
+        .d3{background:PaleTurquoise;}
+        .d4{background:LightPink;}
+        .d5{background:PaleGreen;}
+      
+        .container {
+          font-size: 40px;
+          width: 100%;
+          background: LightGray;
+          display: grid;
+          /* Only change code below this line */
+      
+          grid-template-columns: 1fr 100px 2fr; 
+          /* fr stands for fraction of the available space
+          auto stands for automatic width/height of content
+          % stands for percent width of its container 
+          
+          here, we have 5 containers of different color and we make them 
+          1 fraction, 100 pixels, 2 fractions 
+          for the 3 columns (even though there are 5 containers, they just roll over onto a new row) */
+      
+          /* Only change code above this line */
+          grid-template-rows: 50px 50px;
+        }
+      </style>
+      
+      <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+      </div>
